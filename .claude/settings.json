@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/skills/project-memory-manager/scripts/cleanup-project-temp-files.py --execute --quiet || python3 .claude/skills/project-memory-manager/scripts/cleanup-project-temp-files.py --execute --quiet"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/auto-sync-project-card.py || python3 .claude/hooks/auto-sync-project-card.py"
+          }
+        ]
+      }
+    ]
+  }
+}

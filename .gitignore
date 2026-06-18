@@ -1,0 +1,51 @@
+# Local runtime and editor state
+.claude/settings.local.json
+.obsidian/
+.vscode/
+.idea/
+
+# Secrets and environment files
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Real project workspace data
+Workspace/Projects/**
+!Workspace/Projects/
+!Workspace/Projects/README.md
+
+# Operational scratchpads and generated working state
+Workspace/Knowledge/Operations/current/
+Workspace/Knowledge/Operations/queue/
+Workspace/Knowledge/Operations/history/
+Workspace/Knowledge/Operations/coverage/
+
+# Generated AI concept drafts and production assets
+**/03_Design/02_Assets/AI_Concepts/
+**/04_Final/
+**/*.ai
+**/*.psd
+**/*.indd
+**/*.pdf
+**/*.jpg
+**/*.jpeg
+**/*.png
+**/*.webp
+**/*.tif
+**/*.tiff
+
+# Logs, caches, and temporary files
+*.log
+*.tmp
+*.tmp.*
+*.md.tmp.*
+*.bak
+*.cache
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
