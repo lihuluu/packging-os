@@ -1,32 +1,55 @@
-# Packaging Brief
+---
+project: 山隐·东方高端茶
+layer: 1 - Brief
+skill: brief-decomposer
+---
 
-## Raw Input
+# Packaging Brief — 包装需求 Brief
 
-Demo Tea Co. wants a simple but giftable 80g oolong tea package for boutique retail. The package should feel calm, natural, and credible without relying on expensive finishing.
+> 最低可推进 brief。
+> 对应 skill：`brief-decomposer`
 
-## Minimum Viable Brief
+## 1. Raw Input — 原始需求
 
-| Field | Current Input | Status |
-| --- | --- | --- |
-| Product | Spring Mountain Oolong 80g | Confirmed for demo |
-| Category | Tea packaging | Confirmed for demo |
-| Channel | boutique retail and online gifting | Assumption |
-| Target audience | design-aware tea drinkers and light gift buyers | Assumption |
-| Budget | not confirmed | Open |
-| MOQ | not confirmed | Open |
-| Supplier | not selected | Open |
-| Launch deadline | not confirmed | Open |
+> <一句话需求 / 会议纪要 / 聊天记录 / 语音整理 原文>
 
-## Packaging Direction
+## 2. Minimum Viable Brief
 
-- Keep the structure simple enough for common suppliers.
-- Prioritize clear front recognition at thumbnail size.
-- Avoid assuming special paper, embossing, foil, or custom inserts before supplier feasibility is checked.
+| 字段 | 当前输入 | 状态 |
+|------|---------|------|
+| 产品 | <SKU / 茶类> | [已确认 / 假设 / 待确认] |
+| 品类 | 茶包装 | — |
+| 净含量 / 规格 | <g / 盒型> | — |
+| 渠道 | [电商 / 精品零售 / 礼品 / 企业定制] | — |
+| 目标人群 | <人群描述> | — |
+| 预算 | <金额 或 开放> | [C0]-[C1] |
+| MOQ | <数量 或 开放> | — |
+| 供应商 | [未选 / 已选] | — |
+| 上市截止 | <YYYY-MM-DD 或 开放> | — |
+| 合规要求 | [食品接触 / 标签法规 / 有机认证] | — |
 
-## Handoff
+## 3. Packaging Direction — 包装方向
 
-- Concept direction: `concept-generator`
-- Structure decision: `structure-selector`
-- Supplier feasibility: `supplier-brief-writer`
-- Asset authorization: `visual-system-builder` and `asset-register.md`
+- 结构倾向：<>
+- 视觉倾向：<>
+- 材质倾向：<>
 
+## 4. Key Gaps — 关键缺口
+
+| 缺口 | 影响哪一步 | 谁能补 | 优先级 |
+|------|-----------|--------|--------|
+| <缺口> | <下一步> | <人> | [高/中/低] |
+
+## 5. Handoff — 移交下游
+
+| 下一步 | 交给 skill |
+|--------|-----------|
+| 研究 / 定位 | `research-analyzer` |
+| 概念方向 | `concept-generator` |
+| 结构决策 | `structure-selector` |
+| 供应商可行性 | `supplier-brief-writer` |
+
+## 6. 成本 / 合规提示
+
+- 预算 / 成本证据等级：[C0]-[C1]
+- 标签 / 合规阻塞点：<待识别>

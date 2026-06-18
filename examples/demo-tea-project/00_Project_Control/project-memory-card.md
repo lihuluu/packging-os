@@ -1,39 +1,76 @@
-# Project Memory Card
+---
+project: 山隐·东方高端茶
+layer: 0 - Status
+skill: project-memory-manager
+owner: <负责人>
+status: <draft / in-progress / approved>
+last_updated: <YYYY-MM-DD>
+---
 
-Project: Spring Mountain Oolong 80g
+# Project Memory Card — 项目总卡
 
-Brand: Demo Tea Co.
+> 单一事实源（Single Source of Truth）。已确认事项、冻结项、开放问题、假设、风险集中在此。
+> 对应 skill：`project-memory-manager`
 
-Date started: 2026-06-18
+## 1. 项目基本信息
 
-Status: early direction confirmed, supplier feasibility pending.
+| 字段 | 内容 |
+|------|------|
+| 项目名 | 山隐·东方高端茶 |
+| 品牌 | <品牌> |
+| 品类 / SKU | <茶类 / 具体规格> |
+| 包装形态 | [礼盒 / 罐 / 袋 / 标签系统] |
+| 渠道 | [电商 / 精品零售 / 礼品 / 企业定制] |
+| 负责人 | <负责人> |
+| 开案日期 | <YYYY-MM-DD> |
+| 硬截止日 | <YYYY-MM-DD 或 无> |
+| 当前阶段 | <Layer 0–8> |
 
-## Known Facts
+## 2. Known Facts — 已知事实
 
-- Product: lightly roasted oolong tea.
-- Net weight: 80g.
-- Channel: boutique retail and online gifting.
-- Target price band: mid-premium.
-- Packaging goal: calm giftable format, low production complexity, clear shelf recognition.
-- Sustainability preference: reduce unnecessary rigid inserts where possible.
+- <已确认、可追溯的事实>
 
-## Current Decisions
+## 3. Current Decisions — 当前决策
 
-| Decision | Current State | Evidence |
-| --- | --- | --- |
-| Primary format | Paper canister or small folding carton under review | Demo assumption |
-| Visual tone | quiet mountain freshness, warm craft detail | Demo assumption |
-| Supplier status | not contacted | Demo assumption |
-| Cost evidence level | C0, no supplier quote yet | Demo assumption |
+| 决策项 | 当前状态 | 证据来源 | 成本证据等级 |
+|--------|---------|---------|-------------|
+| <盒型 / 结构> | [待定 / 已选] | <来源> | [C0]-[C5] |
+| <材质工艺> | [待定 / 已选] | <来源> | [C0]-[C5] |
 
-## Open Questions
+## 4. Frozen Items — 冻结项（不再变动）
 
-- Confirm exact canister or carton dimensions.
-- Confirm whether food-contact inner bag is supplied separately.
-- Confirm MOQ and lead time range with a supplier.
-- Confirm whether the brand has final logo and font authorization.
+- <已锁定、不可改的项，及冻结原因>
 
-## Next Step
+## 5. Open Questions — 开放问题
 
-Use `supplier-brief-writer` in rough feasibility mode before requesting a formal quote.
+| 问题 | 谁能回答 | 影响 | 优先级 |
+|------|---------|------|--------|
+| <问题> | <人/方> | <下一步> | [高/中/低] |
 
+## 6. Key Assumptions — 关键假设
+
+- <为推进暂作的假设> → 验证方式：<>
+
+## 7. Risks — 风险
+
+| 风险 | 影响 | 等级 | 缓解措施 |
+|------|------|------|---------|
+| <风险> | [成本/进度/生产/合规] | [高/中/低] | <措施> |
+
+## 8. Cost Ceiling — 成本上限
+
+- 上限：<金额或区间>　证据等级：[C0]-[C1]（未确认前不报真实价）
+
+## 9. 合规 / 资产 / 样品状态
+
+| 项 | 状态 | 关联文件 |
+|----|------|---------|
+| 合规复核 | [未开始 / 进行中 / 通过] | `compliance-review.md` |
+| 资产授权 | [未开始 / 部分 / 全部] | `asset-register.md` |
+| 样品验收 | [未开始 / 白样 / 色样 / 大货] | `sample-acceptance-record.md` |
+| 审批权限 | <谁有权签最终> | — |
+| MOQ / 供应商状态 | <未定 / 已定> | — |
+
+## 10. Next Actions — 下一步
+
+- <动作> → 交给 `<skill>`

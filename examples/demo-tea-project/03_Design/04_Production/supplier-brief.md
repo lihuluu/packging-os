@@ -1,30 +1,55 @@
-# Supplier Feasibility Brief
+---
+project: 山隐·东方高端茶
+layer: 7 - Supplier
+skill: supplier-brief-writer
+---
 
-Mode: rough feasibility check, not a formal quote request.
+# Supplier Brief — 供应商 Brief
 
-## Project Summary
+> 把方案转成供应商 / 工厂能直接看懂并回复的 brief，用于询价 / 打样 / 可行性 / 生产。
+> 对应 skill：`supplier-brief-writer`
 
-- Product: Spring Mountain Oolong 80g.
-- Packaging type under review: paper canister or small folding carton.
-- Goal: giftable but production-stable packaging.
-- Cost evidence level: C0, no supplier quote yet.
+## 模式
 
-## Supplier Questions
+- [粗糙可行性 / 正式询价 / 打样 / 大货]
 
-| Topic | Question | Why It Matters |
-| --- | --- | --- |
-| MOQ | What is the lowest practical MOQ for this structure? | Determines whether the format is commercially viable |
-| Lead time | What is the normal proofing and production lead time? | Affects launch planning |
-| Material | Which standard paper or canister stock is most stable? | Reduces unnecessary custom risk |
-| Printing | Are one-color and two-color options materially different in cost? | Helps choose visual complexity |
-| Food contact | Which parts require food-contact documentation? | Prevents late compliance risk |
-| Sampling | What is included in the sample cost and timeline? | Prevents quote misunderstanding |
+## 1. 项目摘要
 
-## Not Yet Ready For Formal Quote
+- 产品：<>
+- 包装类型：<>
+- 目标：<>
+- 成本证据等级：[C0-C5]
 
-- Final dimensions are not confirmed.
-- Final artwork is not prepared.
-- MOQ is not confirmed.
-- Inner bag responsibility is not confirmed.
-- Asset authorization is not complete.
+## 2. 规格明细
 
+| 项 | 规格 |
+|----|------|
+| 结构 / 盒型 | <> |
+| 材质 | <> |
+| 尺寸 | <> |
+| 印刷 | [色数 / 工艺] |
+| 后道 | <> |
+| 数量 / MOQ | <> |
+| 交期 | <> |
+
+## 3. 需供应商确认的问题
+
+| 主题 | 问题 | 为什么重要 |
+|------|------|-----------|
+| MOQ | <> | <> |
+| 交期 | <> | <> |
+| 材质稳定性 | <> | <> |
+| 食品接触 | <> | <> |
+| 打样 | <> | <> |
+
+## 4. 验收重点
+
+- <白样 / 色样 / 大货验收标准>
+
+## 5. 待确认项（尚不能正式报价）
+
+- <>
+
+## 6. 文件责任边界
+
+- <哪些文件由谁提供>

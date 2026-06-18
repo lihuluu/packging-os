@@ -1,12 +1,28 @@
-# Asset Register
+---
+project: 山隐·东方高端茶
+layer: 4 - Assets
+skill: visual-system-builder
+---
 
-| Asset ID | Type | Name | Source | Authorization Status | Usage Notes |
-| --- | --- | --- | --- | --- | --- |
-| A-001 | Logo | Demo Tea Co. wordmark | Fictional demo asset | Demo only | Replace with real authorized brand file in live projects |
-| A-002 | Illustration | Mountain contour line | Fictional demo placeholder | Demo only | Must be redrawn or licensed before production |
-| A-003 | Font | Sans serif label type | Not selected | Open | Confirm commercial license before final artwork |
+# Asset Register — 资产登记表
 
-## Rule
+> 每个字体、图片、插画、图标、AI 生成图、认证标志、合作品牌 logo 都必须有授权状态记录。
+> 未记录授权状态前，一律不得标为"可交付"。
+> 对应 skill：`visual-system-builder`
 
-No asset in this demo should be treated as production-ready. In a live project, every logo, font, image, illustration, icon, and AI-generated visual must have a recorded authorization status before final delivery.
+| Asset ID | 类型 | 名称 | 来源 | 授权状态 | 使用范围 | 备注 |
+|----------|------|------|------|---------|---------|------|
+| A-001 | [Logo / 字体 / 图片 / 插画 / 图标 / AI 图 / 认证标志] | <名> | [原创 / 购买 / 委托 / AI 生成] | [未确认 / 已授权 / 待购买 / 仅限 demo] | <用途> | <> |
 
+## 授权状态说明
+
+- **已授权**：有书面授权或商业许可，可用于本项目最终交付
+- **待购买**：需购买许可后方可商用
+- **仅限 demo**：仅示例占位，真实项目须替换为已授权资产
+- **AI 生成**：登记到 `AI_Concepts/{task-id}/`，精修 + 印前复核前为参考稿
+
+## 规则
+
+- 任何资产未在此表登记授权状态，不得进入 `04_Final/`
+- 认证标志、合作品牌 logo 必须有使用授权
+- AI 生成视觉按 `{task-id}` 归档
