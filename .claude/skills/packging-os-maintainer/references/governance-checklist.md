@@ -51,7 +51,7 @@
 - 三类模板是否仍使用统一公共字段
 - 词表变化是否反映到 framework 和 asset 模板
 - 没有把同义字段重新写回去
-- 如果变更会通过脚本写入项目级文档，必须复用 `project-memory-manager/scripts/project-file-utils.ps1` 或等价的原子写入流程，并确保失败后临时文件会被治理校验发现
+- 如果变更会通过脚本写入项目级文档，必须复用 `project-memory-manager/scripts/project_file_utils.py` 或等价的原子写入流程，并确保失败后临时文件会被治理校验发现
 
 ## 4. 治理文档变更
 
