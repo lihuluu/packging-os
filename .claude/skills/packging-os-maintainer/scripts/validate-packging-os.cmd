@@ -1,8 +1,19 @@
 @echo off
 setlocal
-
 set "SCRIPT_DIR=%~dp0"
 set "ROOT_DIR=%SCRIPT_DIR%..\..\..\.."
 
-powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; $OutputEncoding = [System.Text.Encoding]::UTF8; & '%SCRIPT_DIR%validate-packging-os.ps1' -Root '%ROOT_DIR%'; exit $LASTEXITCODE"
-exit /b %ERRORLEVEL%
+where python >nul 2>&1
+if %errorlevel%==0 (
+  python "%SCRIPT_DIR%validate-packging-os.py" --root "%ROOT_DIR%" %*
+  exit /b %errorlevel%
+)
+
+where python3 >nul 2>&1
+if %errorlevel%==0 (
+  python3 "%SCRIPT_DIR%validate-packging-os.py" --root "%ROOT_DIR%" %*
+  exit /b %errorlevel%
+)
+
+echo Error: validate-packging-os requires Python (python or python3) on PATH. >&2
+exit /b 1

@@ -1,7 +1,24 @@
 @echo off
-REM init-project.cmd — Windows entry point for project initialization
-REM Usage: .claude\skills\packging-os-maintainer\scripts\init-project.cmd "Project Name"
-REM All arguments are forwarded to the PowerShell script.
+setlocal
+set "SCRIPT_DIR=%~dp0"
+set "ROOT_DIR=%SCRIPT_DIR%..\..\..\.."
 
-powershell -ExecutionPolicy Bypass -File "%~dp0init-project.ps1" %*
-exit /b %ERRORLEVEL%
+if "%~1"=="" (
+  echo Usage: init-project.cmd "Project Name" [--dry-run]
+  exit /b 1
+)
+
+where python >nul 2>&1
+if %errorlevel%==0 (
+  python "%SCRIPT_DIR%init-project.py" --root "%ROOT_DIR%" %*
+  exit /b %errorlevel%
+)
+
+where python3 >nul 2>&1
+if %errorlevel%==0 (
+  python3 "%SCRIPT_DIR%init-project.py" --root "%ROOT_DIR%" %*
+  exit /b %errorlevel%
+)
+
+echo Error: init-project requires Python (python or python3) on PATH. >&2
+exit /b 1

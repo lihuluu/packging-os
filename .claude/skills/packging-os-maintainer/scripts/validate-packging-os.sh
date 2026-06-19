@@ -12,9 +12,5 @@ if command -v python >/dev/null 2>&1; then
   exec python "$SCRIPT_DIR/validate-packging-os.py" --root "$ROOT_DIR"
 fi
 
-if command -v pwsh >/dev/null 2>&1; then
-  exec pwsh -NoProfile -File "$SCRIPT_DIR/validate-packging-os.ps1" -Root "$ROOT_DIR"
-fi
-
-echo "No validation runtime found. Install Python 3 or PowerShell 7, then run this script again." >&2
-exit 127
+echo "Error: validate-packging-os requires Python (python3/python) on PATH." >&2
+exit 1
