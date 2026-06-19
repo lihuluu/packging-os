@@ -21,6 +21,17 @@
           }
         ]
       }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/check-project-memory-drift.py || python3 .claude/hooks/check-project-memory-drift.py"
+          }
+        ]
+      }
     ]
   }
 }
