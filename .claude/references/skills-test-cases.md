@@ -184,7 +184,7 @@
 9. `knowledge-synthesizer` 是否能把批量整理收敛到固定会话包和历史日志。
 10. `knowledge-synthesizer` 是否能把会话准备阶段自动化，但不越权替代知识判断。
 11. `proposal-builder` 是否只处理提案页序和讲法，不吞掉概念生成或项目排期。
-12. `.claude/skills/packging-os-maintainer/scripts/validate-packging-os.ps1` / `validate-packging-os.py` 是否能发现缺失 skill、失效引用和 README 技能表漂移。
+12. `.claude/skills/packging-os-maintainer/scripts/validate-packging-os.py 是否能发现缺失 skill、失效引用和 README 技能表漂移。
 13. 项目卡、复盘、知识沉淀三类模板是否统一使用 `项目摘要 / 来源文档 / 已知事实 / 关键假设 / 风险 / 开放问题 / 结论沉淀 / 下一步动作` 这套公共词表。
 14. 修改 `.claude/skills/`、`README.md`、`CLAUDE.md` 或共享模板时，是否会优先进入 `packging-os-maintainer` 并运行治理检查。
 15. 治理校验脚本是否能发现 `.DS_Store`、`*.tmp.*` 等系统或临时文件。

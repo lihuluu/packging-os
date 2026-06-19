@@ -1,6 +1,6 @@
 ---
 name: packging-os-maintainer
-description: 维护 Packging OS 这套 Claude Code 系统的治理一致性、skill 路由、模板字段、测试样例和共享脚本。适用于新增或修改 `.claude/skills/`、`CLAUDE.md`、`README.md`、`.claude/references/skills-test-cases.md`、共享模板、共享字段词表或 `packging-os-maintainer/scripts/validate-packging-os.cmd` / `validate-packging-os.sh` / `validate-packging-os.ps1` / `validate-packging-os.py` 之后的巡检、补同步和回归检查场景。常见触发说法包括：帮我检查这套 Claude Code 系统有没有漂、我刚改了几个 skill 顺手把文档和路由补齐、给 Packging OS 做一次治理巡检、我新增了一个 skill 帮我把 README 和测试补上、跑一遍 Packging OS 验证并告诉我还缺什么。不适用于具体包装项目的业务判断。
+description: 维护 Packging OS 这套 Claude Code 系统的治理一致性、skill 路由、模板字段、测试样例和共享脚本。适用于新增或修改 `.claude/skills/`、`CLAUDE.md`、`README.md`、`.claude/references/skills-test-cases.md`、共享模板、共享字段词表或 `packging-os-maintainer/scripts/validate-packging-os.cmd` / `validate-packging-os.sh` / `validate-packging-os.py` 之后的巡检、补同步和回归检查场景。常见触发说法包括：帮我检查这套 Claude Code 系统有没有漂、我刚改了几个 skill 顺手把文档和路由补齐、给 Packging OS 做一次治理巡检、我新增了一个 skill 帮我把 README 和测试补上、跑一遍 Packging OS 验证并告诉我还缺什么。不适用于具体包装项目的业务判断。
 ---
 
 # Packging OS Maintainer
@@ -64,19 +64,17 @@ description: 维护 Packging OS 这套 Claude Code 系统的治理一致性、sk
 
 ## 脚本入口
 
-- 一键治理校验（Windows 原生，不依赖 Python）：[validate-packging-os.cmd](./scripts/validate-packging-os.cmd)
-- 一键治理校验（Mac/Linux，自动选择 python3、python 或 pwsh）：[validate-packging-os.sh](./scripts/validate-packging-os.sh)
-- 底层治理校验（PowerShell，Windows 原生）：[validate-packging-os.ps1](./scripts/validate-packging-os.ps1)
-- 底层治理校验（Python，Mac/Linux 首选）：[validate-packging-os.py](./scripts/validate-packging-os.py)
+- 一键治理校验（Windows）：[validate-packging-os.cmd](./scripts/validate-packging-os.cmd)
+- 一键治理校验（Mac/Linux）：[validate-packging-os.sh](./scripts/validate-packging-os.sh)
+- 底层治理校验（Python）：[validate-packging-os.py](./scripts/validate-packging-os.py)
 - 共享验证配置（标题定义）：[validation-config.json](./scripts/validation-config.json)
 - 日常治理总入口（Windows）：[daily-governance-check.cmd](./scripts/daily-governance-check.cmd)
 - 日常治理总入口（Mac/Linux）：[daily-governance-check.sh](./scripts/daily-governance-check.sh)
 - 新建标准项目目录（Windows）：[init-project.cmd](./scripts/init-project.cmd)
 - 新建标准项目目录（Mac/Linux）：[init-project.sh](./scripts/init-project.sh)
-- 新建标准项目目录（PowerShell 底层脚本）：[init-project.ps1](./scripts/init-project.ps1)
 - 新建标准项目目录（Python 底层脚本）：[init-project.py](./scripts/init-project.py)
 - 项目目录临时文件清理（Windows）：[`../project-memory-manager/scripts/cleanup-project-temp-files.cmd`](../project-memory-manager/scripts/cleanup-project-temp-files.cmd)
 - 项目目录临时文件清理（Mac/Linux）：[`../project-memory-manager/scripts/cleanup-project-temp-files.sh`](../project-memory-manager/scripts/cleanup-project-temp-files.sh)
 - 知识库临时文件清理：[`../knowledge-synthesizer/scripts/cleanup-temp-files.sh`](../knowledge-synthesizer/scripts/cleanup-temp-files.sh)
 
-`.cmd` 和 `.sh` 是跨平台入口，负责选择合适运行时；`.ps1` 和 `.py` 是底层校验器，共享 `validation-config.json` 中的标题定义。Windows 上优先用 `validate-packging-os.cmd`，Mac/Linux 上优先用 `sh validate-packging-os.sh`。
+`.cmd` 和 `.sh` 是跨平台入口，负责选择 Python 运行时（`python3` / `python`）；`.py` 是底层校验器，共享 `validation-config.json` 中的标题定义。Windows 上优先用 `validate-packging-os.cmd`，Mac/Linux 上优先用 `sh validate-packging-os.sh`。

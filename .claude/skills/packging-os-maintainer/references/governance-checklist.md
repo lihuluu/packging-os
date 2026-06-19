@@ -68,7 +68,6 @@
 ## 5. 共享脚本或验证脚本变更
 
 适用文件：
-- `.claude/skills/packging-os-maintainer/scripts/validate-packging-os.ps1`
 - `.claude/skills/packging-os-maintainer/scripts/validate-packging-os.py`
 - 被多个 skill 共用的脚本
 
