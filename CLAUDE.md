@@ -85,7 +85,7 @@ sh .claude/skills/project-memory-manager/scripts/cleanup-project-temp-files.sh
 python3 .claude/skills/project-memory-manager/scripts/check-memory-drift.py --all
 ```
 
-The `.cmd` and `.sh` launchers select the platform runtime; the underlying `.ps1` and `.py` validators share `validation-config.json` for heading definitions, keeping behavior consistent across platforms.
+The `.cmd` and `.sh` launchers select the Python runtime; the underlying `.py` validator shares `validation-config.json` for heading definitions, keeping behavior consistent across platforms.
 Project temp cleanup is dry-run by default; use `-Execute` on Windows or `--execute` on Mac/Linux only after reviewing the file list.
 
 ## Routing Rules

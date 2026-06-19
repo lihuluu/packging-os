@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """validate-packging-os.py - Packging OS governance validation (cross-platform).
-Works on Python 3.8+ on Mac/Linux/Windows. Shares config with the .ps1 variant.
+Works on Python 3.8+ on Mac/Linux/Windows. Uses validation-config.json for heading definitions.
 """
 from __future__ import annotations
 
