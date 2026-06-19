@@ -6,7 +6,7 @@
 
 ## 推荐扫描顺序
 
-1. 运行 `.claude/skills/knowledge-synthesizer/scripts/get-knowledge-coverage.ps1`
+1. 运行 `.claude/skills/knowledge-synthesizer/scripts/get_knowledge_coverage.py`
 2. 更新 `Workspace/Knowledge/Operations/coverage/project-knowledge-coverage.md`
 3. 把缺少沉淀的项目写入 `Workspace/Knowledge/Operations/queue/knowledge-capture-inbox.md`
 4. 优先处理：

@@ -6,8 +6,8 @@
 
 ## 推荐会话顺序
 
-1. 运行 `.claude/skills/knowledge-synthesizer/scripts/get-knowledge-coverage.ps1`
-2. 运行 `.claude/skills/knowledge-synthesizer/scripts/build-knowledge-review-packet.ps1`
+1. 运行 `.claude/skills/knowledge-synthesizer/scripts/get_knowledge_coverage.py`
+2. 运行 `.claude/skills/knowledge-synthesizer/scripts/build_knowledge_review_packet.py`
 3. 阅读 `Workspace/Knowledge/Operations/current/current-review-session.md`
 4. 根据优先级处理项目级 `knowledge-synthesis.md`
 5. 更新：
