@@ -6,12 +6,12 @@ set "ROOT_DIR=%SCRIPT_DIR%..\..\..\.."
 for %%I in ("%ROOT_DIR%") do set "ROOT_DIR=%%~fI"
 set "FAILED=0"
 
-echo Packging OS - daily governance check
+echo Packaging OS - daily governance check
 echo Repository: %ROOT_DIR%
 echo.
 
 echo [1/3] Governance validation
-call "%SCRIPT_DIR%validate-packging-os.cmd"
+call "%SCRIPT_DIR%validate-packaging-os.cmd"
 if errorlevel 1 set "FAILED=1"
 echo.
 

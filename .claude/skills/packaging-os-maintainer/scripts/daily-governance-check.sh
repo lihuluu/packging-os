@@ -5,11 +5,11 @@ SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 ROOT_DIR=$(CDPATH= cd -- "$SCRIPT_DIR/../../../.." && pwd)
 FAILED=0
 
-printf 'Packging OS - daily governance check\n'
+printf 'Packaging OS - daily governance check\n'
 printf 'Repository: %s\n\n' "$ROOT_DIR"
 
 printf '[1/3] Governance validation\n'
-sh "$SCRIPT_DIR/validate-packging-os.sh" || FAILED=1
+sh "$SCRIPT_DIR/validate-packaging-os.sh" || FAILED=1
 printf '\n'
 
 printf '[2/3] Project temp cleanup dry-run\n'

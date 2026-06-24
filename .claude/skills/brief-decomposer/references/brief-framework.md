@@ -118,3 +118,4 @@ brief-decomposer 只需要尽量弄清这些入口问题：
 
 - 过程分析使用 `assets/brief-decomposition-template.md`
 - 正式 brief 使用 `assets/packaging-brief-template.md`
+- 向各相关方批量收集 Brief 阶段缺失信息使用 `assets/intake-checklist-template.md`（通用茶叶，含调味茶 / 紧压茶 / 袋泡 / 礼盒附录）

@@ -12,9 +12,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with th
 
 ---
 
-**IMPORTANT: This is NOT a software code repository.** This is **Packging OS** — a packaging design studio workflow system built as Claude Skills. It manages packaging projects through a 9-layer workflow from brief to production.
+**IMPORTANT: This is NOT a software code repository.** This is **Packaging OS** — a packaging design studio workflow system built as Claude Skills. It manages packaging projects through a 9-layer workflow from brief to production.
 
-**Domain Strategy:** Packging OS keeps a general packaging-design workflow backbone, because the long-term goal is an independent design studio that can expand into more categories. The current default business domain is **tea packaging design**. When the user does not name another category, interpret projects as tea SKUs, tea gift boxes, tea label systems, tea packaging production, or tea packaging version work.
+**Domain Strategy:** Packaging OS keeps a general packaging-design workflow backbone, because the long-term goal is an independent design studio that can expand into more categories. The current default business domain is **tea packaging design**. When the user does not name another category, interpret projects as tea SKUs, tea gift boxes, tea label systems, tea packaging production, or tea packaging version work.
 
 If a request is clearly outside tea packaging, do not force it through tea-specific assumptions. Use the general workflow, call out that the category module is not yet specialized, and suggest what new category facts must be added before making production-sensitive recommendations.
 
@@ -49,7 +49,7 @@ All business logic lives in `.claude/skills/<skill-name>/`:
 
 **Mode A: Working on a packaging project** — Use the appropriate skill based on the 9-layer workflow above. Default to the tea packaging domain unless the user explicitly names another category.
 
-**Mode B: Maintaining Packging OS itself** — Use `packging-os-maintainer` when modifying:
+**Mode B: Maintaining Packaging OS itself** — Use `packaging-os-maintainer` when modifying:
 - `.claude/skills/` (adding/modifying skills)
 - `CLAUDE.md`, `README.md`, `.claude/references/skills-test-cases.md`
 - Shared templates or field glossaries
@@ -61,7 +61,7 @@ All business logic lives in `.claude/skills/<skill-name>/`:
 
 ```bash
 # Create a new packaging project with standard directory structure
-python3 .claude/skills/packging-os-maintainer/scripts/init-project.py "Project Name"
+python3 .claude/skills/packaging-os-maintainer/scripts/init-project.py "Project Name"
 ```
 
 This creates:
@@ -71,11 +71,11 @@ This creates:
 ### System Maintenance
 
 ```bash
-# Validate Packging OS consistency (Windows, no Python required)
-.claude\skills\packging-os-maintainer\scripts\validate-packging-os.cmd
+# Validate Packaging OS consistency (Windows, no Python required)
+.claude\skills\packaging-os-maintainer\scripts\validate-packaging-os.cmd
 
-# Validate Packging OS consistency (Mac/Linux, auto-selects python3/python/pwsh)
-sh .claude/skills/packging-os-maintainer/scripts/validate-packging-os.sh
+# Validate Packaging OS consistency (Mac/Linux, auto-selects python3/python/pwsh)
+sh .claude/skills/packaging-os-maintainer/scripts/validate-packaging-os.sh
 
 # Preview project temp files before deleting anything
 .claude\skills\project-memory-manager\scripts\cleanup-project-temp-files.cmd
@@ -90,11 +90,11 @@ Project temp cleanup is dry-run by default; use `-Execute` on Windows or `--exec
 
 ## Routing Rules
 
-- **Unclear where to start** → `packging-os`
+- **Unclear where to start** → `packaging-os`
 - **Need to update project status** → `project-memory-manager`
-- **User names a specific stage** → Use that skill directly, don't route through `packging-os`
+- **User names a specific stage** → Use that skill directly, don't route through `packaging-os`
 - **Request spans multiple stages** → Handle the most blocking bottleneck first, then name the next skill
-- **Maintaining the system itself** → `packging-os-maintainer`
+- **Maintaining the system itself** → `packaging-os-maintainer`
 - **Category unclear** → assume tea packaging; ask only for missing SKU, tea type/process, specification, channel, packaging form, budget, timeline, and compliance details that materially affect the next decision
 - **Non-tea category named** → keep the general workflow, but mark category-specific advice as assumptions until a category module or enough facts are provided
 
@@ -159,9 +159,9 @@ Every response must:
 
 Before declaring work complete:
 
-- **Modifying a skill**: Verify SKILL.md frontmatter, local references exist, routing is consistent with `packging-os`
+- **Modifying a skill**: Verify SKILL.md frontmatter, local references exist, routing is consistent with `packaging-os`
 - **Modifying templates**: Verify linked files exist, archive paths are correct
-- **Modifying the system**: Run `validate-packging-os.cmd` on Windows or `validate-packging-os.sh` on Mac/Linux, check `README.md` and `.claude/references/skills-test-cases.md` consistency
+- **Modifying the system**: Run `validate-packaging-os.cmd` on Windows or `validate-packaging-os.sh` on Mac/Linux, check `README.md` and `.claude/references/skills-test-cases.md` consistency
 
 ## Phase Transition Rules
 

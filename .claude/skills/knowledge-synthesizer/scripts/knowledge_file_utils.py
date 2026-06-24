@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""knowledge_file_utils.py — 知识库脚本共享工具（跨平台，Packging OS）。
+"""knowledge_file_utils.py — 知识库脚本共享工具（跨平台，Packaging OS）。
 
 等价于原 knowledge-file-utils.ps1 的原子写能力，并把原 ps1 在
 get-knowledge-coverage / build-knowledge-review-packet / start-knowledge-review-session

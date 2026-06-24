@@ -1,4 +1,4 @@
-# Packging OS 桥接节点规则
+# Packaging OS 桥接节点规则
 
 ## 目标
 

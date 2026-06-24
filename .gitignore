@@ -49,3 +49,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Internal team-share material (not for public repo)
+docs/team-share/

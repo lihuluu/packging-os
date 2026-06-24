@@ -1,4 +1,4 @@
-# Packging OS 治理检查
+# Packaging OS 治理检查
 
 ## 本次变更范围
 

@@ -22,14 +22,14 @@ Failed with non-blocking status code: /bin/sh: powershell.exe: command not found
 `.claude/settings.local.json` 的 `UserPromptSubmit` hook 调用：
 
 ```
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "D:\Dropbox\Packging_OS\.claude\hooks\check-project-memory-drift.ps1"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "D:\Dropbox\Packaging_OS\.claude\hooks\check-project-memory-drift.ps1"
 ```
 
 两个问题：① `powershell.exe` 在 Mac 不存在；② 路径是 Windows 的 `D:\`。配置是 Windows 机器遗留（`settings.local.json` 在 Dropbox 同步）。
 
 ## 3. 这个 hook 在做什么（有用，别删）
 
-扫 `Workspace/Projects/` 所有项目，比较记忆卡 `project-memory-card.md` 和最新产出文件的修改时间，落后超过 1 分钟就注入 `<packging-os-reminder>` 提醒；没落后就 `exit 0` 静默。逻辑详见 `.claude/hooks/check-project-memory-drift.ps1`。
+扫 `Workspace/Projects/` 所有项目，比较记忆卡 `project-memory-card.md` 和最新产出文件的修改时间，落后超过 1 分钟就注入 `<packaging-os-reminder>` 提醒；没落后就 `exit 0` 静默。逻辑详见 `.claude/hooks/check-project-memory-drift.ps1`。
 
 ## 4. 当前系统所有 hook（2026-06-19 盘点）
 
@@ -119,7 +119,7 @@ for project in sorted(p for p in projects_root.iterdir() if p.is_dir()):
 if not drifted:
     sys.exit(0)
 
-print("<packging-os-reminder>")
+print("<packaging-os-reminder>")
 print("Some project memory cards may be behind the latest project files. If the user "
       "request touches project status, project memory, dashboards, or handoff state, "
       "consider reminding them or updating the relevant card explicitly.")
@@ -127,7 +127,7 @@ for name, status, card_t, latest_t, latest_f in drifted[:5]:
     print(f"- {name}: {status}; card={card_t}; latest={latest_t}; latest_file={latest_f}")
 if len(drifted) > 5:
     print(f"- ... plus {len(drifted) - 5} more project(s).")
-print("</packging-os-reminder>")
+print("</packaging-os-reminder>")
 sys.exit(0)
 ```
 

@@ -15,11 +15,17 @@ stdin 收到 Claude Code 的 hook JSON：
 """
 from __future__ import annotations
 
+import io
 import json
 import os
 import subprocess
 import sys
 from pathlib import Path
+
+# Windows GBK 终端兼容：print 含中文项目名/路径（如 HGT235_特级高山绿茶）会 UnicodeEncodeError。
+# 非 UTF-8 终端时把 stderr 包成 utf-8(errors=replace)；Mac/Linux 已是 UTF-8，零影响。
+if sys.stderr.encoding and sys.stderr.encoding.lower() not in ("utf-8", "utf-8-sig"):
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 
 HOOK_DIR = Path(__file__).resolve().parent
@@ -62,7 +68,7 @@ def extract_project_name(file_path: str) -> str | None:
 
 def main() -> int:
     # 安静模式：hook 输出会显示给用户，所以默认不打印任何东西
-    debug = os.environ.get("PACKGING_OS_HOOK_DEBUG") == "1"
+    debug = os.environ.get("PACKAGING_OS_HOOK_DEBUG") == "1"
 
     try:
         payload = json.load(sys.stdin)

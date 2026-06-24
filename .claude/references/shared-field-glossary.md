@@ -1,4 +1,4 @@
-# Packging OS 共享字段词表
+# Packaging OS 共享字段词表
 
 ## 目标
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""get_knowledge_coverage.py — 批量盘点项目知识沉淀覆盖率（跨平台，Packging OS）。
+"""get_knowledge_coverage.py — 批量盘点项目知识沉淀覆盖率（跨平台，Packaging OS）。
 
 等价于原 get-knowledge-coverage.ps1。扫描 Workspace/Projects 下每个项目，
 判定知识沉淀状态，输出 JSON（stdout）。既可被 start_knowledge_review_session.py
@@ -57,7 +57,7 @@ def collect_coverage(root: Path) -> list[dict]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="批量盘点项目知识沉淀覆盖率，输出 JSON。")
-    parser.add_argument("--root", default=None, help="Packging OS 根目录（默认脚本 parents[4]）")
+    parser.add_argument("--root", default=None, help="Packaging OS 根目录（默认脚本 parents[4]）")
     args = parser.parse_args()
 
     root = Path(args.root).resolve() if args.root else Path(__file__).resolve().parents[4]

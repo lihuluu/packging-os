@@ -4,7 +4,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build a read-only static HTML project control dashboard that ranks Packging OS projects by explainable priority and summarizes project cards plus the single allowed `project-tracker.md`.
+**Goal:** Build a read-only static HTML project control dashboard that ranks Packaging OS projects by explainable priority and summarizes project cards plus the single allowed `project-tracker.md`.
 
 **Architecture:** Add an independent Python generator beside the existing project dashboard scripts. It scans `Workspace/Projects`, parses `project-memory-card.md` and the unique per-project `project-tracker.md`, calculates an explainable score, and writes `Workspace/Projects/project-dashboard.html`.
 

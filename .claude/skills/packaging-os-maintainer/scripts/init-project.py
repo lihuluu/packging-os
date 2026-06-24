@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-init-project.py — Packging OS 项目目录初始化脚本
+init-project.py — Packaging OS 项目目录初始化脚本
 
 用法：
-    python3 .claude/skills/packging-os-maintainer/scripts/init-project.py "项目名称"
+    python3 .claude/skills/packaging-os-maintainer/scripts/init-project.py "项目名称"
 
 功能：
     在 Workspace/Projects/<项目名称>/ 下创建标准目录结构，
@@ -672,7 +672,7 @@ def seed_file(root: Path, project_dir: Path, project_name: str, template_path: s
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="初始化 Packging OS 标准项目目录。")
+    parser = argparse.ArgumentParser(description="初始化 Packaging OS 标准项目目录。")
     parser.add_argument("project_name", help="项目名称，将作为目录名使用")
     parser.add_argument("--root", default=None, help="仓库根目录（默认自动推断）")
     parser.add_argument("--dry-run", action="store_true", help="只打印路径，不实际创建")
@@ -720,7 +720,7 @@ def main() -> int:
         print("- 03_Design/01_Working/decision-log.md")
         print("- 01_Brief/brief-decomposition.md")
         print("- 01_Brief/packaging-brief.md")
-        print("下一步：先补项目卡和 brief，再运行 packging-os 开始项目。")
+        print("下一步：先补项目卡和 brief，再运行 packaging-os 开始项目。")
 
     return 0
 

@@ -69,7 +69,7 @@ def find_junk(root: Path) -> list[Path]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Clean project temp files (cross-platform).")
-    parser.add_argument("--root", default=None, help="Packging OS root (defaults to script's parents[4])")
+    parser.add_argument("--root", default=None, help="Packaging OS root (defaults to script's parents[4])")
     parser.add_argument("--execute", action="store_true", help="Actually delete files (default: dry-run)")
     parser.add_argument("--quiet", action="store_true", help="Suppress per-file output")
     args = parser.parse_args()

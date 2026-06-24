@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""project_file_utils.py — 项目文档安全写入工具（跨平台，Packging OS）。
+"""project_file_utils.py — 项目文档安全写入工具（跨平台，Packaging OS）。
 
 等价于原 project-file-utils.ps1。提供原子写：先写同目录 .tmp.{pid}.{ms}，
 再 os.replace 替换正式文件，最后清理残留 .tmp.*；失败时保留临时文件并抛出异常。

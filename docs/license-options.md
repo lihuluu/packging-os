@@ -1,6 +1,6 @@
 # License Options
 
-Packging OS contains both workflow/code-like materials and design-process writing, so the license choice should be deliberate.
+Packaging OS contains both workflow/code-like materials and design-process writing, so the license choice should be deliberate.
 
 ## Recommended Simple Option
 
@@ -52,4 +52,4 @@ Tradeoff:
 
 The first public release uses MIT unless this file is revised before publication.
 
-The root `LICENSE` file uses `Packging OS contributors` as the copyright holder.
+The root `LICENSE` file uses `Packaging OS contributors` as the copyright holder.

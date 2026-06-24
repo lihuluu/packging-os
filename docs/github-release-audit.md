@@ -4,7 +4,7 @@ Date: 2026-06-18
 
 ## Current Recommendation
 
-Publish Packging OS as an open workflow system, not as a mirror of the current working folder.
+Publish Packaging OS as an open workflow system, not as a mirror of the current working folder.
 
 The public value is the packaging-design operating method: Claude Skills, shared references, templates, maintainer checks, and a fictional demo project. The private value is the live project memory, supplier context, pricing evidence, client language, and local tool configuration. Those must stay out of GitHub.
 
@@ -66,7 +66,7 @@ Status: drafted in `docs/github-public-readme-draft.md`.
 
 ### 5. Naming should be decided before launch
 
-The current folder and docs use `Packging OS`. If this is intentional branding, keep it and explain it. If the public name should use the fully spelled English word instead, fix it before publishing, because renaming after launch is noisier.
+The current folder and docs use `Packaging OS`. If this is intentional branding, keep it and explain it. If the public name should use the fully spelled English word instead, fix it before publishing, because renaming after launch is noisier.
 
 Status: manual decision required.
 
@@ -75,7 +75,7 @@ Status: manual decision required.
 Recommended repository shape:
 
 ```text
-packging-os/
+packaging-os/
   README.md
   CLAUDE.md
   LICENSE
@@ -96,10 +96,10 @@ packging-os/
 
 ## Pre-Publish Checklist
 
-- [ ] Confirm whether the public name stays `Packging OS` or changes to a fully spelled alternative.
+- [ ] Confirm whether the public name stays `Packaging OS` or changes to a fully spelled alternative.
 - [x] Choose a license.
 - [ ] Rotate any token that has appeared in `.claude/settings.local.json`.
-- [ ] Run the Packging OS validation script.
+- [ ] Run the Packaging OS validation script.
 - [ ] Run secret/contact searches against the future public surface.
 - [ ] Initialize git only after the ignore rules are in place.
 - [ ] Review `git status --ignored` before the first commit.
@@ -112,7 +112,7 @@ packging-os/
 git init
 git add README.md CLAUDE.md LICENSE .gitignore .claude/settings.json .claude/hooks .claude/references .claude/skills Workspace/Templates Workspace/Knowledge/Library docs examples
 git status
-git commit -m "chore: prepare Packging OS public release"
+git commit -m "chore: prepare Packaging OS public release"
 ```
 
 Do not run the `git add` command until the checklist above is complete.
@@ -123,7 +123,7 @@ Current verification on 2026-06-18:
 
 - Public-surface secret scan found no actual external API token pattern in the candidate public paths.
 - Public-surface contact scan found no phone number or email pattern in the candidate public paths.
-- Packging OS validation no longer reports a release-document naming issue.
+- Packaging OS validation no longer reports a release-document naming issue.
 - Whole-workspace validation still reports pre-existing private workspace issues:
   - four temporary files under `Workspace/Projects/HGT235_特级高山绿茶500g/00_Project_Control/`
   - `Workspace/Knowledge/Operations/coverage/project-knowledge-coverage.md` missing `茶+康养调味茶系列`

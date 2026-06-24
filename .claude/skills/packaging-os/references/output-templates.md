@@ -1,4 +1,4 @@
-# Packging OS 输出模板
+# Packaging OS 输出模板
 
 ## 目录
 - 标准命名

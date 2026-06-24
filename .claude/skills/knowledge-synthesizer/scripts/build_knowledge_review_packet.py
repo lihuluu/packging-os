@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""build_knowledge_review_packet.py — 生成本轮知识整理会话包（跨平台，Packging OS）。
+"""build_knowledge_review_packet.py — 生成本轮知识整理会话包（跨平台，Packaging OS）。
 
 等价于原 build-knowledge-review-packet.ps1。扫描所有项目，按优先级排序，
 生成 current-review-session.md，包含四段：Session Metadata / Priority Queue /
@@ -98,7 +98,7 @@ def build_packet_markdown(root: Path, scan_date: str) -> tuple[list[str], list[d
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="生成本轮知识整理会话包 current-review-session.md。")
-    parser.add_argument("--root", default=None, help="Packging OS 根目录（默认脚本 parents[4]）")
+    parser.add_argument("--root", default=None, help="Packaging OS 根目录（默认脚本 parents[4]）")
     parser.add_argument("--output-path", default=None, help="输出文件路径（默认 Operations/current/current-review-session.md）")
     args = parser.parse_args()
 

@@ -4,11 +4,11 @@ This file is the final launch checklist after the release audit.
 
 ## 1. Decide The Public Name
 
-Current local name: `Packging OS`.
+Current local name: `Packaging OS`.
 
 Options:
 
-- Keep `Packging OS` as a distinctive project name.
+- Keep `Packaging OS` as a distinctive project name.
 - Rename publicly before launch if a fully spelled English name is preferred.
 
 Do this before the first public push. Repository renames are possible later, but early naming clarity is cleaner.
@@ -71,7 +71,7 @@ git status
 ## 7. Commit
 
 ```powershell
-git commit -m "chore: prepare Packging OS public release"
+git commit -m "chore: prepare Packaging OS public release"
 ```
 
 ## 8. Create GitHub Repo And Push

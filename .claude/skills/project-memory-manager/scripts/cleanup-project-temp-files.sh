@@ -45,7 +45,7 @@ if [[ ! -d "$PROJECTS_DIR" ]]; then
 fi
 
 # ── 扫描临时文件 ────────────────────────────────────────────────────────────
-echo "Packging OS — 项目临时文件清理"
+echo "Packaging OS — 项目临时文件清理"
 echo "扫描目录：$PROJECTS_DIR"
 echo "模式：$( [[ "$EXECUTE" == true ]] && echo '实际删除' || echo 'dry-run（只列出，不删除）' )"
 echo ""

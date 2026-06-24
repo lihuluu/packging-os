@@ -1,14 +1,23 @@
 #!/usr/bin/env python3
-"""validate-packging-os.py - Packging OS governance validation (cross-platform).
+"""validate-packaging-os.py - Packaging OS governance validation (cross-platform).
 Works on Python 3.8+ on Mac/Linux/Windows. Uses validation-config.json for heading definitions.
 """
 from __future__ import annotations
 
 import argparse
+import io
 import json
 import re
 import sys
 from pathlib import Path
+
+# Windows GBK 终端兼容：issue 含中文项目名/标题（如 HGT235_特级高山绿茶），print 默认走
+# GBK 遇非 GBK 字符会 UnicodeEncodeError。非 UTF-8 终端时把 stdout/stderr 包成
+# utf-8(errors=replace)；Mac/Linux 已是 UTF-8，if 条件不成立，零影响。
+if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf-8-sig"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+if sys.stderr.encoding and sys.stderr.encoding.lower() not in ("utf-8", "utf-8-sig"):
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 
 REQUIRED_DOCS = [
@@ -31,14 +40,20 @@ LEGACY_PATH_SEGMENTS = {
     "03_Design/02_Structure/": "03_Design/04_Production/",
 }
 LEGACY_TEXT_PATTERNS = {
-    "packaging-os-maintainer": "packging-os-maintainer",
-    "packaging-os": "packging-os",
-    "validate-design-os": "validate-packging-os",
-    "Design OS": "Packging OS",
-    "design-os": "packging-os",
-    "Packaging OS": "Packging OS",
-    "Packaging Design OS": "Packging OS",
+    "packging-os-maintainer": "packaging-os-maintainer",
+    "packging-os": "packaging-os",
+    "validate-design-os": "validate-packaging-os",
+    "Design OS": "Packaging OS",
+    "design-os": "packaging-os",
+    "Packging OS": "Packaging OS",
+    "Packging Design OS": "Packaging OS",
 }
+
+# 保留旧名属正当情况的文件（不判违规）：
+# - CHANGELOG.md：记录改名事件本身，必须出现旧名
+# - docs/releases/：历史发布快照，不可回溯改写（见 CHANGELOG 的 Kept As-Is 清单）
+LEGACY_TEXT_ALLOWLIST_NAMES = {"CHANGELOG.md"}
+LEGACY_TEXT_ALLOWLIST_PREFIXES = ("docs/releases/",)
 
 RELATIVE_MARKDOWN_LINK_RE = re.compile(r"\]\(((?:\./|\.\./)[^)#?]+)\)")
 ABSOLUTE_MARKDOWN_LINK_RE = re.compile(r"\]\((/[^)#?]+)\)")
@@ -149,10 +164,12 @@ def test_legacy_text_references(root: Path, issues: list[str]) -> None:
     for path in sorted(root.rglob("*")):
         if not path.is_file() or path.suffix not in TEXT_SCAN_SUFFIXES:
             continue
-        if path.name in {"validate-packging-os.py", "validate-packging-os.ps1"}:
+        display_path = relpath(path, root)
+        if path.name in {"validate-packaging-os.py", "validate-packaging-os.ps1"}:
+            continue
+        if display_path in LEGACY_TEXT_ALLOWLIST_NAMES or display_path.startswith(LEGACY_TEXT_ALLOWLIST_PREFIXES):
             continue
         content = read_text(path)
-        display_path = relpath(path, root)
         for legacy_text, replacement in LEGACY_TEXT_PATTERNS.items():
             if legacy_text in content:
                 issues.append(f"[legacy-name] {display_path} -> '{legacy_text}' should be '{replacement}'")
@@ -271,7 +288,7 @@ def test_coverage_sync(root: Path, issues: list[str]) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate Packging OS governance consistency.")
+    parser = argparse.ArgumentParser(description="Validate Packaging OS governance consistency.")
     parser.add_argument(
         "--root",
         default=None,
@@ -323,8 +340,8 @@ def main() -> int:
             if skill not in readme_skills:
                 issues.append(f"[readme-missing-skill] {skill}")
 
-    packaging_skill = skill_root / "packging-os" / "SKILL.md"
-    packaging_scope_exclusions = {"packging-os", "packging-os-maintainer"}
+    packaging_skill = skill_root / "packaging-os" / "SKILL.md"
+    packaging_scope_exclusions = {"packaging-os", "packaging-os-maintainer"}
     if packaging_skill.exists():
         packaging_content = read_text(packaging_skill)
         for skill_dir in skill_dirs:
@@ -333,7 +350,7 @@ def main() -> int:
                 continue
             skill_token = f"`{skill_name}`"
             if skill_token not in packaging_content:
-                issues.append(f"[router-missing-skill] packging-os does not reference: {skill_name}")
+                issues.append(f"[router-missing-skill] packaging-os does not reference: {skill_name}")
 
     test_required_headings(
         skill_root / "project-memory-manager" / "assets" / "project-memory-card-template.md",
@@ -412,12 +429,12 @@ def main() -> int:
     test_coverage_sync(root, issues)
 
     if issues:
-        print(f"Packging OS validation failed ({len(issues)} issues):", file=sys.stderr)
+        print(f"Packaging OS validation failed ({len(issues)} issues):", file=sys.stderr)
         for issue in issues:
             print(f"- {issue}", file=sys.stderr)
         return 1
 
-    print("Packging OS validation passed.")
+    print("Packaging OS validation passed.")
     return 0
 
 

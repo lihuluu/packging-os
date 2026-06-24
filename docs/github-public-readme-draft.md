@@ -1,6 +1,6 @@
-# Packging OS
+# Packaging OS
 
-Packging OS is a packaging-design studio workflow system built around Claude Skills.
+Packaging OS is a packaging-design studio workflow system built around Claude Skills.
 
 It helps an independent packaging designer or small studio move from messy early briefs to structured packaging decisions, supplier communication, visual validation, prepress checks, production handoff, and retrospective knowledge capture.
 
@@ -8,7 +8,7 @@ The current default domain is tea packaging, but the backbone is meant to suppor
 
 ## What This Is
 
-Packging OS is not a traditional software application. It is an agent-readable operating system for packaging work:
+Packaging OS is not a traditional software application. It is an agent-readable operating system for packaging work:
 
 - Claude Skills encode repeatable design and production workflows.
 - Project memory cards keep each project's facts and decisions grounded.

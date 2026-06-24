@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""start_knowledge_review_session.py — 一键启动本轮知识整理会话（跨平台，Packging OS）。
+"""start_knowledge_review_session.py — 一键启动本轮知识整理会话（跨平台，Packaging OS）。
 
 等价于原 start-knowledge-review-session.ps1。编排 get_knowledge_coverage 与
 build_knowledge_review_packet，生成 Operations 下的 coverage / queue / current 三类文件
@@ -196,7 +196,7 @@ def run_session(root: Path, knowledge_root: Path) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="一键启动本轮知识整理会话，生成 coverage/inbox/session/draft。")
-    parser.add_argument("--root", default=None, help="Packging OS 根目录（默认脚本 parents[4]）")
+    parser.add_argument("--root", default=None, help="Packaging OS 根目录（默认脚本 parents[4]）")
     parser.add_argument("--knowledge-root", default=None, help="知识库 Operations 目录（默认 Workspace/Knowledge/Operations）")
     args = parser.parse_args()
 

@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Prepare Packging OS for a safe first GitHub publication without exposing local secrets, private project records, supplier data, or client work.
+**Goal:** Prepare Packaging OS for a safe first GitHub publication without exposing local secrets, private project records, supplier data, or client work.
 
 **Architecture:** Keep the current working directory intact and add publication guardrails around it. The public release surface is the workflow system, Claude Skills, shared references, templates, docs, and a fictional demo project; private project execution data remains ignored.
 
@@ -62,7 +62,7 @@ Add common image, PDF, Adobe, final-output, and AI concept draft patterns.
 
 - [ ] **Step 1: Write the public positioning**
 
-Position Packging OS as a packaging-design studio workflow system built with Claude Skills.
+Position Packaging OS as a packaging-design studio workflow system built with Claude Skills.
 
 - [ ] **Step 2: Explain the 9-layer workflow**
 
@@ -98,13 +98,13 @@ Make it clear that production-sensitive details require supplier confirmation an
 **Files:**
 - Read: `.gitignore`
 - Read: `docs/github-release-audit.md`
-- Run: `.claude\skills\packging-os-maintainer\scripts\validate-packging-os.cmd`
+- Run: `.claude\skills\packaging-os-maintainer\scripts\validate-packaging-os.cmd`
 
 - [ ] **Step 1: Run publication-sensitive searches**
 
 Run searches for likely secret markers and real-contact markers in the future public surface.
 
-- [ ] **Step 2: Run Packging OS validation**
+- [ ] **Step 2: Run Packaging OS validation**
 
 Run the maintainer validation command and record whether it passes.
 

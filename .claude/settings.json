@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/skills/project-memory-manager/scripts/cleanup-project-temp-files.py --execute --quiet || python .claude/skills/project-memory-manager/scripts/cleanup-project-temp-files.py --execute --quiet"
+            "command": "python3 \"${CLAUDE_PROJECT_DIR:-.}/.claude/skills/project-memory-manager/scripts/cleanup-project-temp-files.py\" --execute --quiet || python \"${CLAUDE_PROJECT_DIR:-.}/.claude/skills/project-memory-manager/scripts/cleanup-project-temp-files.py\" --execute --quiet"
           }
         ]
       }
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/auto-sync-project-card.py || python .claude/hooks/auto-sync-project-card.py"
+            "command": "python3 \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/auto-sync-project-card.py\" || python \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/auto-sync-project-card.py\""
           }
         ]
       }
@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/check-project-memory-drift.py || python .claude/hooks/check-project-memory-drift.py"
+            "command": "python3 \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/check-project-memory-drift.py\" || python \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/check-project-memory-drift.py\""
           }
         ]
       }

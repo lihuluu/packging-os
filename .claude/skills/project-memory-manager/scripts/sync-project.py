@@ -324,7 +324,7 @@ def detect_structural_decisions(card_path: Path) -> list[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Sync project status from project-memory-card.md")
-    parser.add_argument("--root", default=None, help="Packging OS root")
+    parser.add_argument("--root", default=None, help="Packaging OS root")
     parser.add_argument("--project", required=True, help="Project folder name (or substring)")
     args = parser.parse_args()
 

@@ -132,7 +132,7 @@ def main() -> int:
             ok_projects.append((name, fmt_dt(card_mtime), fmt_dt(latest_mtime)))
 
     # ── 输出 ────────────────────────────────────────────────────────────────
-    print(f"Packging OS — 项目卡漂移检查")
+    print(f"Packaging OS — 项目卡漂移检查")
     print(f"扫描目录：{projects_dir}")
     print(f"漂移阈值：{args.threshold} 天")
     print(f"扫描时间：{datetime.now().strftime('%Y-%m-%d %H:%M')}")

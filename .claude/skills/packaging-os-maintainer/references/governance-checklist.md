@@ -1,4 +1,4 @@
-# Packging OS 治理检查清单
+# Packaging OS 治理检查清单
 
 ## 1. skill 新增
 
@@ -9,9 +9,9 @@
 最小同步项：
 - `README.md` 的完整技能列表
 - 如果是包装工作流叶子 skill：
-  - `.claude/skills/packging-os/SKILL.md`
-  - `.claude/skills/packging-os/references/workflow-map.md`
-  - `.claude/skills/packging-os/references/output-routing.md`
+  - `.claude/skills/packaging-os/SKILL.md`
+  - `.claude/skills/packaging-os/references/workflow-map.md`
+  - `.claude/skills/packaging-os/references/output-routing.md`
   - 如有通用输出模板变化，再看 `output-templates.md`
 - `.claude/references/skills-test-cases.md`：
   - 至少补 1 到 3 条核心样例
@@ -20,8 +20,8 @@
 验证：
 - skill 内 `SKILL.md` 存在
 - `SKILL.md` 引用的本地文件存在
-- Windows：`.claude\skills\packging-os-maintainer\scripts\validate-packging-os.cmd`
-- Mac/Linux：`sh .claude/skills/packging-os-maintainer/scripts/validate-packging-os.sh`
+- Windows：`.claude\skills\packaging-os-maintainer\scripts\validate-packaging-os.cmd`
+- Mac/Linux：`sh .claude/skills/packaging-os-maintainer/scripts/validate-packaging-os.sh`
 
 ## 2. skill 边界收紧或放宽
 
@@ -31,7 +31,7 @@
   - 什么时候触发
   - 什么场景不优先使用
 - 相关边界样例是否需要改预期
-- 如果路由判断发生变化，`packging-os` 是否同步
+- 如果路由判断发生变化，`packaging-os` 是否同步
 
 高风险信号：
 - 只改了正文，没改 frontmatter `description`
@@ -45,7 +45,7 @@
 - `project-memory-manager`
 - `project-retrospective`
 - `knowledge-synthesizer`
-- `packging-os/references/output-templates.md`
+- `packaging-os/references/output-templates.md`
 
 最小检查：
 - 三类模板是否仍使用统一公共字段
@@ -68,7 +68,7 @@
 ## 5. 共享脚本或验证脚本变更
 
 适用文件：
-- `.claude/skills/packging-os-maintainer/scripts/validate-packging-os.py`
+- `.claude/skills/packaging-os-maintainer/scripts/validate-packaging-os.py`
 - 被多个 skill 共用的脚本
 
 最小检查：
